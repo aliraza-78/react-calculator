@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* LIGHT MODE */
+.calculator.light {
+  background: #f9f9f9;
+  color: #000;
+}
+
+.calculator.light input {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.calculator.light .buttons button {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.calculator.light .buttons button:hover {
+  background: #d0d0d0;
+}
+
+.calculator.light .history {
+  border-top: 1px solid #ccc;
+}
+
+.calculator.light .history li {
+  border-bottom: 1px solid #ddd;
+}
+
+/* DARK MODE */
+.calculator.dark {
+  background: #333;
+  color: #fff;
+}
+
+.calculator.dark input {
+  background: #555;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+.calculator.dark .buttons button {
+  background: #555;
+  color: #fff;
+}
+
+.calculator.dark .buttons button:hover {
+  background: #777;
+}
+
+.calculator.dark .history {
+  border-top: 1px solid #888;
+}
+
+.calculator.dark .history li {
+  border-bottom: 1px solid #666;
+}
+
+/* COMMON STYLES */
+.calculator input {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.buttons button {
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+.mode-btn {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+}
+
+.calculator.dark .mode-btn {
+  background: #ffa500;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .buttons button {
+    width: 50px;
+    padding: 12px;
+  }
+
+  .calculator input {
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
